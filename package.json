@@ -13,4 +13,61 @@
     "mongoose": "^4.11.13",
     "nodemon": "^1.12.1"
   }
-}
+},
+"dependencies": {
+  "eslint-config-airbnb": "~14.1.0",
+  "eslint-loader": "~1.9.0",
+  "eslint-plugin-import": "~2.7.0",
+  "eslint-plugin-jsx-a11y": "~4.0.0",
+  "eslint-plugin-react": "~6.10.3",
+},
+"eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "plugins": [],
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "grecaptcha": true
+    },
+    "rules": {
+      "no-underscore-dangle": "off",
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "external",
+            [
+              "internal",
+              "parent",
+              "sibling",
+              "builtin",
+              "index"
+            ]
+          ],
+          "newlines-between": "always"
+        }
+      ],
+      "react/jsx-sort-props": [
+        "error",
+        {
+          "ignoreCase": true,
+          "callbacksLast": true,
+          "shorthandFirst": true,
+          "noSortAlphabetically": true
+        }
+      ],
+      "max-len": [
+        "error",
+        100,
+        2,
+        {
+          "ignoreUrls": true,
+          "ignoreComments": false,
+          "ignoreRegExpLiterals": true,
+          "ignoreTemplateLiterals": true
+        }
+      ]
+    }
+  }
